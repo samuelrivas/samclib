@@ -3,8 +3,10 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
-Name: libsclib
+Name: libsamclib
 Description: Samuel's common C utilities
 Version: @VERSION@
+URL: https://github.com/samuelrivas/samclib
+Requires: glib-2.0
 Libs:
 Cflags: -I${includedir}
