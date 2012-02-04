@@ -28,12 +28,28 @@
 #ifndef _SC_LOG_H_
 #define _SC_LOG_H_
 
-#include <stdio.h>
+#include <glib.h>
 
 /* Debug log messages */
 #define DEBUG(__format, ...) {                                          \
-    fprintf(stderr, "\033[35m%s:%d \033[36m" __format "\033[0m\r\n",    \
-            __FILE__, __LINE__, __VA_ARGS__);                           \
+    g_debug("%s:%d " __format, __FILE__, __LINE__, ##__VA_ARGS__);      \
   }
+
+#define INFO(__message, ...) {                  \
+    g_message(__message, ##__VA_ARGS__);	\
+  }
+
+#define WARNING(__message, ...) {		\
+    g_warning(__message, ##__VA_ARGS__);	\
+  }
+
+/* This aborts the program */
+#define PANIC(__message, ...) {                                         \
+    g_log(G_LOG_DOMAIN, G_LOG_LEVEL_ERROR,				\
+	  "%d:%s " __message, __LINE__, __FILE__, ##__VA_ARGS__);	\
+  }
+
+/** \brief Syntactic sugar for panicing stating a bug was found */
+#define BUG {HUC_PANIC("You have found a bug. Please report")}
 
 #endif
