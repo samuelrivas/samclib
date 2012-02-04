@@ -36,17 +36,17 @@
   }
 
 #define INFO(__message, ...) {                  \
-    g_message(__message, ##__VA_ARGS__);	\
+    g_message(__message, ##__VA_ARGS__);        \
   }
 
-#define WARNING(__message, ...) {		\
-    g_warning(__message, ##__VA_ARGS__);	\
+#define WARNING(__message, ...) {               \
+    g_warning(__message, ##__VA_ARGS__);        \
   }
 
 /* This aborts the program */
 #define PANIC(__message, ...) {                                         \
-    g_log(G_LOG_DOMAIN, G_LOG_LEVEL_ERROR,				\
-	  "%d:%s " __message, __LINE__, __FILE__, ##__VA_ARGS__);	\
+    g_log(G_LOG_DOMAIN, G_LOG_LEVEL_ERROR,                              \
+          "%s:%d " __message, __FILE__, __LINE__, ##__VA_ARGS__);       \
   }
 
 /** \brief Syntactic sugar for panicing stating a bug was found */
