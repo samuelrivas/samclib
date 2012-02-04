@@ -1,0 +1,4 @@
+*~
+*.dblite
+lib/*
+subst_in_file.pyc

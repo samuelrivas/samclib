@@ -1,0 +1,10 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libsclib
+Description: Samuel's common C utilities
+Version: @VERSION@
+Libs:
+Cflags: -I${includedir}

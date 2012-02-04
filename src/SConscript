@@ -1,0 +1,7 @@
+Import(['env'])
+
+env.SubstInFile(
+    '#/lib/pkgconfig/libsamclib.pc', 'libsamclib.pc.template',
+    SUBST_DICT = {'@PREFIX@': env.GetBuildPath('#'),
+                  '@VERSION@' : "$VERSION"})
+
