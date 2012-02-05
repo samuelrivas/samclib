@@ -25,8 +25,8 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _SC_LOG_H_
-#define _SC_LOG_H_
+#ifndef _SCL_LOG_H_
+#define _SCL_LOG_H_
 
 #include <glib.h>
 

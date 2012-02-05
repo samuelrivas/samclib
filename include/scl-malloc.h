@@ -25,8 +25,8 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _SC_MALLOC_H_
-#define _SC_MALLOC_H_
+#ifndef _SCL_MALLOC_H_
+#define _SCL_MALLOC_H_
 
 #include "scl-log.h"
 
